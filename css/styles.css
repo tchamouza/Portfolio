@@ -1,0 +1,141 @@
+/* Réduction générale de la taille des polices */
+body {
+    font-size: 14px;
+}
+
+h1 {
+    font-size: 2rem;
+}
+
+h2.section-title {
+    font-size: 1.8rem;
+}
+
+h3 {
+    font-size: 1.3rem;
+}
+
+p, li, a, .btn-hire, .social-link {
+    font-size: 0.95rem;
+}
+
+/* Responsive Design Tablette */
+@media (max-width: 1024px) {
+    .intro {
+        flex-direction: column;
+        text-align: center;
+        gap: 30px;
+        padding: 60px 0;
+    }
+
+    .intro-text h1 {
+        font-size: 1.8rem;
+    }
+
+    .btn-hire {
+        font-size: 0.9rem;
+        padding: 10px 24px;
+    }
+
+    .section-title {
+        font-size: 1.6rem;
+    }
+
+    .content-box p {
+        font-size: 1rem;
+    }
+
+    .competences-list li {
+        font-size: 1rem;
+    }
+}
+
+/* Responsive Design Téléphone */
+@media (max-width: 768px) {
+    .nav-links {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .nav-links a {
+        font-size: 0.85rem;
+        padding: 6px 10px;
+    }
+
+    .intro {
+        padding: 40px 0;
+    }
+
+    .intro-text h1 {
+        font-size: 1.6rem;
+    }
+
+    .btn-hire {
+        font-size: 0.85rem;
+    }
+
+    .section-title {
+        font-size: 1.5rem;
+        margin: 30px 0 20px;
+    }
+
+    .content-box {
+        padding: 20px;
+    }
+
+    .competences-list ul {
+        grid-template-columns: 1fr;
+    }
+
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .service-card {
+        padding: 20px;
+    }
+
+    .service-card h3 {
+        font-size: 1.2rem;
+    }
+
+    .service-card p {
+        font-size: 0.9rem;
+    }
+
+    .social-links {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .social-link {
+        width: 90%;
+        max-width: 250px;
+        justify-content: center;
+        font-size: 0.9rem;
+        padding: 10px 20px;
+    }
+}
+
+/* Responsive pour grands écrans type ordinateur */
+@media (min-width: 1200px) {
+    body {
+        font-size: 15px;
+    }
+
+    h1 {
+        font-size: 2.2rem;
+    }
+
+    h2.section-title {
+        font-size: 2rem;
+    }
+
+    h3 {
+        font-size: 1.4rem;
+    }
+
+    p, li, a, .btn-hire, .social-link {
+        font-size: 1rem;
+    }
+}
