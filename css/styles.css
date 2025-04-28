@@ -1,7 +1,7 @@
-/* Import de la police Poppins depuis Google Fonts */
+/* Import de la police Poppins */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 
-/* Reset et styles de base */
+/* Reset de base */
 * {
     margin: 0;
     padding: 0;
@@ -13,10 +13,11 @@ body {
     background-color: #f5f7fa;
     color: #333;
     line-height: 1.6;
-    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
     font-weight: 400;
 }
 
+/* Container */
 .container {
     max-width: 1200px;
     margin: 0 auto;
@@ -45,9 +46,10 @@ header {
     color: white;
     text-decoration: none;
     font-weight: 500;
-    transition: all 0.3s ease;
+    font-size: 0.95rem;
     padding: 8px 16px;
     border-radius: 4px;
+    transition: all 0.3s ease;
 }
 
 .nav-links a:hover {
@@ -55,23 +57,23 @@ header {
     background-color: rgba(255, 255, 255, 0.1);
 }
 
-/* Titres de section */
+/* Titres */
 .section-title {
     text-align: center;
-    font-size: 2.2rem;
-    margin: 60px 0 40px;
+    font-size: 1.8rem;
+    margin: 50px 0 30px;
     color: #2c3e50;
-    position: relative;
     font-weight: 600;
+    position: relative;
 }
 
 .section-title::after {
     content: '';
     display: block;
-    width: 80px;
-    height: 4px;
+    width: 70px;
+    height: 3px;
     background: #fb8500;
-    margin: 15px auto 0;
+    margin: 10px auto 0;
 }
 
 /* Section Introduction */
@@ -79,27 +81,27 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 40px;
-    padding: 80px 0;
+    gap: 30px;
+    padding: 60px 0;
     flex-wrap: wrap;
 }
 
 .intro-photo {
     flex: 1;
-    min-width: 300px;
+    min-width: 280px;
     text-align: center;
 }
 
 .intro-photo img {
     width: 100%;
-    max-width: 350px;
+    max-width: 320px;
     border-radius: 15px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
     border: 5px solid #ffffff;
 }
 
 .intro-text h1 {
-    font-size: 2.5rem;
+    font-size: 2rem;
     margin-bottom: 20px;
     color: #2c3e50;
     line-height: 1.2;
@@ -110,24 +112,17 @@ header {
     color: #fb8500;
 }
 
-.intro-text p {
-    font-size: 1.1rem;
-    color: #555;
-    margin-bottom: 30px;
-    font-weight: 400;
-}
-
 .btn-hire {
     display: inline-block;
     background: #fb8500;
     color: white;
-    padding: 12px 30px;
+    padding: 10px 25px;
     border-radius: 50px;
     text-decoration: none;
     font-weight: 600;
+    font-size: 0.95rem;
     transition: all 0.3s ease;
     border: 2px solid #fb8500;
-    font-size: 1rem;
 }
 
 .btn-hire:hover {
@@ -135,14 +130,14 @@ header {
     color: #fb8500;
 }
 
-/* Section À propos et Compétences */
+/* À propos et compétences */
 .section-box {
-    padding: 20px 0 60px;
+    padding: 20px 0 50px;
 }
 
 .content-box {
     background: white;
-    padding: 40px;
+    padding: 30px;
     border-radius: 10px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
     max-width: 800px;
@@ -150,181 +145,149 @@ header {
 }
 
 .content-box p {
-    font-size: 1.1rem;
+    font-size: 1rem;
     color: #555;
     line-height: 1.8;
     text-align: center;
-    margin-bottom: 20px;
 }
 
-/* Liste des compétences */
+/* Liste compétences */
 .competences-list ul {
-    list-style-type: none;
+    list-style: none;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     gap: 15px;
 }
 
 .competences-list li {
-    padding: 12px 20px;
-    background-color: #f8f9fa;
-    border-radius: 6px;
-    font-size: 1.1rem;
-    color: #333;
     position: relative;
-    padding-left: 35px;
+    padding: 12px 20px 12px 40px;
+    background: #f8f9fa;
+    border-radius: 6px;
+    font-size: 1rem;
+    color: #333;
     font-weight: 500;
 }
 
 .competences-list li::before {
     content: '✓';
-    color: #fb8500;
-    font-weight: bold;
     position: absolute;
     left: 15px;
+    color: #fb8500;
+    font-weight: bold;
 }
 
-/* Section Services */
+/* Services */
 .services-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 25px;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
 }
 
 .service-card {
     background: white;
-    padding: 30px;
+    padding: 25px;
     border-radius: 10px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-    transition: all 0.3s ease;
     text-align: center;
+    transition: all 0.3s ease;
 }
 
 .service-card:hover {
-    transform: translateY(-10px);
+    transform: translateY(-8px);
     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
 }
 
 .service-card h3 {
-    font-size: 1.4rem;
-    margin-bottom: 15px;
+    font-size: 1.3rem;
+    margin-bottom: 10px;
     color: #fb8500;
     font-weight: 600;
 }
 
 .service-card p {
+    font-size: 0.95rem;
     color: #666;
-    font-size: 1rem;
     font-weight: 400;
 }
 
-/* Section Contact */
-.contact{
-    height: 25vh;
+/* Contact */
+.contact {
+    padding: 50px 0;
+    text-align: center;
 }
+
 .social-links {
     display: flex;
     justify-content: center;
-    gap: 20px;
     flex-wrap: wrap;
+    gap: 15px;
 }
 
 .social-link {
     display: flex;
     align-items: center;
-    gap: 10px;
-    padding: 12px 25px;
-    color: #2c3e50;
+    gap: 8px;
+    background: #2c3e50;
+    color: white;
+    padding: 10px 20px;
     border-radius: 50px;
     text-decoration: none;
     font-weight: 600;
+    font-size: 0.95rem;
+    border: 2px solid #2c3e50;
     transition: all 0.3s ease;
-    font-size: 1rem;
 }
 
 .social-link:hover {
     background: transparent;
-    color: #fb8500;
+    color: #2c3e50;
 }
 
 .social-link i {
+    font-size: 1.1rem;
+}
+
+/* Footer */
+.footer {
+    background-color: #2c3e50;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    font-size: 0.9rem;
+    margin-top: 40px;
+}
+
+.footer-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.footer-socials {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.footer-socials a {
+    color: white;
     font-size: 1.2rem;
+    transition: color 0.3s ease;
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-    .nav-links {
-        gap: 10px;
-        flex-wrap: wrap;
-    }
-
-    .nav-links a {
-        padding: 6px 12px;
-        font-size: 0.9rem;
-    }
-
-    .intro {
-        flex-direction: column;
-        text-align: center;
-        padding: 60px 0 40px;
-    }
-
-    .intro-text {
-        margin-top: 30px;
-    }
-
-    .section-title {
-        font-size: 1.8rem;
-        margin: 40px 0 30px;
-    }
-
-    .content-box {
-        padding: 25px;
-    }
-
-    .competences-list ul {
-        grid-template-columns: 1fr;
-    }
-
-    .social-links {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .social-link {
-        width: 100%;
-        max-width: 250px;
-        justify-content: center;
-    }
-}
-/* Réduction générale de la taille des polices */
-body {
-    font-size: 14px;
+.footer-socials a:hover {
+    color: #fb8500;
 }
 
-h1 {
-    font-size: 2rem;
-}
-
-h2.section-title {
-    font-size: 1.8rem;
-}
-
-h3 {
-    font-size: 1.3rem;
-}
-
-p, li, a, .btn-hire, .social-link {
-    font-size: 0.95rem;
-}
-
-/* Responsive Design Tablette */
+/* Responsive Tablette */
 @media (max-width: 1024px) {
     .intro {
         flex-direction: column;
         text-align: center;
-        gap: 30px;
-        padding: 60px 0;
+        padding: 50px 0;
     }
 
     .intro-text h1 {
@@ -333,23 +296,14 @@ p, li, a, .btn-hire, .social-link {
 
     .btn-hire {
         font-size: 0.9rem;
-        padding: 10px 24px;
     }
 
     .section-title {
         font-size: 1.6rem;
     }
-
-    .content-box p {
-        font-size: 1rem;
-    }
-
-    .competences-list li {
-        font-size: 1rem;
-    }
 }
 
-/* Responsive Design Téléphone */
+/* Responsive Téléphone */
 @media (max-width: 768px) {
     .nav-links {
         flex-wrap: wrap;
@@ -375,7 +329,6 @@ p, li, a, .btn-hire, .social-link {
 
     .section-title {
         font-size: 1.5rem;
-        margin: 30px 0 20px;
     }
 
     .content-box {
@@ -394,29 +347,12 @@ p, li, a, .btn-hire, .social-link {
         padding: 20px;
     }
 
-    .service-card h3 {
-        font-size: 1.2rem;
-    }
-
-    .service-card p {
-        font-size: 0.9rem;
-    }
-
-    .social-links {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .social-link {
-        width: 90%;
-        max-width: 250px;
-        justify-content: center;
-        font-size: 0.9rem;
-        padding: 10px 20px;
+    .footer-socials a {
+        font-size: 1.4rem;
     }
 }
 
-/* Responsive pour grands écrans type ordinateur */
+/* Grand écran */
 @media (min-width: 1200px) {
     body {
         font-size: 15px;
@@ -426,15 +362,7 @@ p, li, a, .btn-hire, .social-link {
         font-size: 2.2rem;
     }
 
-    h2.section-title {
+    .section-title {
         font-size: 2rem;
-    }
-
-    h3 {
-        font-size: 1.4rem;
-    }
-
-    p, li, a, .btn-hire, .social-link {
-        font-size: 1rem;
     }
 }
