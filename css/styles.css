@@ -9,17 +9,27 @@
     font-family: 'Poppins', sans-serif;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     background-color: #f5f7fa;
     color: #333;
     line-height: 1.6;
-    font-size: 14px;
+    font-size: clamp(13px, 1.5vw, 16px);
     font-weight: 400;
+}
+
+/* Images fluides */
+img {
+    max-width: 100%;
+    height: auto;
 }
 
 /* Container */
 .container {
-    max-width: 1200px;
+    max-width: min(1200px, 90%);
     margin: 0 auto;
     padding: 0 20px;
 }
@@ -40,6 +50,7 @@ header {
     justify-content: center;
     gap: 30px;
     list-style: none;
+    flex-wrap: wrap;
 }
 
 .nav-links a {
@@ -60,7 +71,7 @@ header {
 /* Titres */
 .section-title {
     text-align: center;
-    font-size: 1.8rem;
+    font-size: clamp(1.5rem, 2vw, 2rem);
     margin: 50px 0 30px;
     color: #2c3e50;
     font-weight: 600;
@@ -93,7 +104,6 @@ header {
 }
 
 .intro-photo img {
-    width: 100%;
     max-width: 320px;
     border-radius: 15px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
@@ -101,7 +111,7 @@ header {
 }
 
 .intro-text h1 {
-    font-size: 2rem;
+    font-size: clamp(1.5rem, 3vw, 2.2rem);
     margin-bottom: 20px;
     color: #2c3e50;
     line-height: 1.2;
@@ -290,16 +300,8 @@ header {
         padding: 50px 0;
     }
 
-    .intro-text h1 {
-        font-size: 1.8rem;
-    }
-
     .btn-hire {
         font-size: 0.9rem;
-    }
-
-    .section-title {
-        font-size: 1.6rem;
     }
 }
 
@@ -319,16 +321,8 @@ header {
         padding: 40px 0;
     }
 
-    .intro-text h1 {
-        font-size: 1.6rem;
-    }
-
     .btn-hire {
         font-size: 0.85rem;
-    }
-
-    .section-title {
-        font-size: 1.5rem;
     }
 
     .content-box {
@@ -352,17 +346,42 @@ header {
     }
 }
 
-/* Grand écran */
-@media (min-width: 1200px) {
-    body {
-        font-size: 15px;
+/* Responsive Très petits écrans */
+@media (max-width: 480px) {
+    .intro-text h1 {
+        font-size: 1.3rem;
     }
 
-    h1 {
-        font-size: 2.2rem;
+    .btn-hire {
+        padding: 8px 18px;
+        font-size: 0.8rem;
+    }
+
+    .content-box p,
+    .service-card p {
+        font-size: 0.9rem;
     }
 
     .section-title {
-        font-size: 2rem;
+        font-size: 1.3rem;
+    }
+}
+
+/* Grand écran / 4K */
+@media (min-width: 1600px) {
+    .container {
+        max-width: 1400px;
+    }
+
+    .intro-text h1 {
+        font-size: 2.5rem;
+    }
+
+    .btn-hire {
+        font-size: 1rem;
+    }
+
+    .section-title {
+        font-size: 2.2rem;
     }
 }
