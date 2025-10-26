@@ -1,149 +1,522 @@
 <!DOCTYPE html>
 <html lang="fr">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
-    <link rel="stylesheet" href="./css/styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio - Toï Ewaza TCHAMOUZA</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+<script src="js/scripts.js" defer></script>
 </head>
 
 <body>
-    <!-- Header -->
-    <header>
-        <nav class="container">
-            <div class="nav-links">
-                <a href="#profile">Profil</a>
-                <a href="#apropos">À propos</a>
-                <a href="#competences">Compétences</a>
-                <a href="#services">Services</a>
-                <a href="#contact">Contact</a>
+
+  <!-- Particles Background -->
+  <canvas id="particles"></canvas>
+
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="#">Toï Ewaza</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"><i class="fas fa-bars text-white"></i></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a href="#profile" class="nav-link">Profil</a></li>
+          <li class="nav-item"><a href="#apropos" class="nav-link">À propos</a></li>
+          <li class="nav-item"><a href="#formation" class="nav-link">Formation</a></li>
+          <li class="nav-item"><a href="#competences" class="nav-link">Compétences</a></li>
+          <li class="nav-item"><a href="#mathematiques" class="nav-link">Mathématiques</a></li>
+          <li class="nav-item"><a href="#certifications" class="nav-link">Certifications</a></li>
+          <li class="nav-item"><a href="#projets" class="nav-link">Projets</a></li>
+          <li class="nav-item"><a href="#services" class="nav-link">Services</a></li>
+          <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HEADER -->
+  <header id="profile">
+    <div class="header-content">
+      <div class="container text-center">
+        <img src="WhatsApp Image 2025-04-26 at 00.45.27_d9f324bc.jpg" alt="Photo de profil" class="profile-img">
+        <h1 class="mt-4">Toï Ewaza TCHAMOUZA</h1>
+        <p>Étudiant en Mathématiques Fondamentales • Développeur Web • Cybersécurité Offensive</p>
+        <a href="#contact" class="btn-glow">Me contacter</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- À PROPOS -->
+  <section id="apropos">
+    <div class="container">
+      <h2 class="section-title">À propos de moi</h2>
+      <div class="neon-line"></div>
+      <div class="row mt-5">
+        <div class="col-lg-10 mx-auto">
+          <div class="about-content reveal">
+            <p class="lead">
+              Passionné par les <span class="math-highlight">mathématiques fondamentales</span> et les technologies de l'information, 
+              je combine rigueur scientifique et expertise technique pour résoudre des problèmes complexes.  
+              Étudiant à l'<span class="university-highlight">Université de Lomé</span> en mathématiques et membre actif de la 
+              <span class="highlight">Red Team-TG</span>, je développe une approche unique alliant théorie mathématique et sécurité informatique.
+            </p>
+            <p>
+              Mon parcours académique en <span class="math-highlight">mathématiques pures</span> me permet d'aborder les défis techniques 
+              avec une méthodologie rigoureuse, tandis que ma formation pratique en cybersécurité et développement web 
+              me donne les outils pour concevoir des solutions innovantes et sécurisées.
+            </p>
+            <div class="row mt-4">
+              <div class="col-md-4">
+                <h5><i class="fas fa-university me-2 university-highlight"></i>Formation Principale</h5>
+                <p>Université de Lomé<br>Mathématiques Fondamentales</p>
+              </div>
+              <div class="col-md-4">
+                <h5><i class="fas fa-laptop-code me-2"></i>Formation Technique</h5>
+                <p>ESIG Global Success<br>Développement Web & Cybersécurité</p>
+              </div>
+              <div class="col-md-4">
+                <h5><i class="fas fa-users me-2"></i>Communauté</h5>
+                <p>Membre de Red Team-TG<br>Cybersécurité Offensive</p>
+              </div>
             </div>
-        </nav>
-    </header>
-
-    <!-- Contenu principal -->
-    <main class="main-content container">
-
-        <!-- Profil -->
-        <section id="profile">
-            <h2 class="section-title">Profil</h2>
-            <div class="intro">
-                <div class="intro-photo">
-                    <img src="WhatsApp Image 2025-04-26 at 00.45.27_d9f324bc.jpg" alt="Photo de profil">
-                </div>
-                <div class="intro-text">
-                    <h1><span>Toï Ewaza TCHAMOUZA</span><br>Développeur Web Junior & Cybersécurité</h1>
-                    <a href="#contact" class="btn-hire">Me contacter</a>
-                </div>
-            </div>
-        </section>
-
-        <!-- À propos -->
-        <section id="apropos" class="section-box">
-            <h2 class="section-title">À propos de moi</h2>
-            <div class="content-box">
-                <p>
-                    Étudiant en licence de Mathématiques à l'Université de Lomé et en Cybersécurité à ESIG Global
-                    Success, je suis passionné par les sciences et les technologies. Titulaire d'un Baccalauréat
-                    scientifique (série C) obtenu en 2022, j'ai débuté mon parcours universitaire en Mathématiques avant
-                    d'intégrer, en 2024, ESIG Global Success pour y préparer un BTS en Développement Web, suivi d'une
-                    Licence Professionnelle en Cybersécurité. <br> <br>
-
-                    Membre actif de la Red Team-TG, je développe mes compétences en cybersécurité offensive tout en
-                    consolidant mes connaissances en développement web, programmation (C, Python, PHP), administration
-                    Linux, réseaux et virtualisation. <br> <br>
-
-                    Futur mathématicien informaticien, je me positionne aujourd'hui comme Développeur Web Junior avec
-                    une forte appétence pour la sécurité informatique.
-                </p>
-            </div>
-        </section>
-
-        <!-- Compétences -->
-        <section id="competences" class="section-box">
-            <h2 class="section-title">Compétences</h2>
-            <div class="content-box competences-list">
-                <ul>
-                    <li>Administration Linux</li>
-                    <li>Configuration des routeurs et antennes WiFi</li>
-                    <li>Microsoft Office</li>
-                    <li>C (Langage de programmation)</li>
-                    <li>Python (Langage de programmation)</li>
-                    <li>HTML (HyperText Markup Language)</li>
-                    <li>CSS (Feuilles de styles en cascade)</li>
-                    <li>Virtualisation (VMware, VirtualBox)</li>
-                    <li>Installation des OS (Windows, Linux) simple et en dual boot</li>
-                    <li>PHP (Langage de programmation)</li>
-                </ul>
-            </div>
-        </section>
-
-        <!-- Services -->
-        <section id="services">
-            <h2 class="section-title">Mes Services</h2>
-            <div class="services-grid">
-                <div class="service-card">
-                    <h3>Développement Web</h3>
-                    <p>Création de sites statiques et dynamiques avec HTML, CSS, PHP, MySQL.</p>
-                </div>
-                <div class="service-card">
-                    <h3>Programmation</h3>
-                    <p>Débogage d'applications en C ( Langage de programmation).</p>
-                </div>
-                <div class="service-card">
-                    <h3>Cybersécurité</h3>
-                    <p>Conseils en protection des données.</p>
-                </div>
-                <div class="service-card">
-                    <h3>Administration Linux</h3>
-                    <p>Installation et gestion des systèmes Linux.</p>
-                </div>
-                <div class="service-card">
-                    <h3>Virtualisation</h3>
-                    <p>Configuration de machines virtuelles (VMware, VirtualBox).</p>
-                </div>
-                <div class="service-card">
-                    <h3>Support Informatique</h3>
-                    <p>Installation des OS (Windows ,Linux) en dual boot, dépannage informatique.</p>
-                </div>
-                <div class="service-card">
-                    <h3>Réseaux</h3>
-                    <p>Configuration des routeurs et antennes WiFi.</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Contact -->
-        <section id="contact" class="contact">
-            <h2 class="section-title">Contact</h2>
-            <div class="social-links">
-                <a href="tel:+22892588895" class="social-link">
-                    <i class="fas fa-phone-alt"></i> +228 92 58 88 95
-                </a>
-                <a href="https://wa.me/22892588895" target="_blank" class="social-link">
-                    <i class="fab fa-whatsapp"></i> WhatsApp
-                </a>
-
-            </div>
-        </section>
-
-    </main>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container footer-container">
-            <p>&copy; 2025 Toï Ewaza Tchamouza. Tous droits réservés.</p>
-            <div class="footer-socials">
-                <a href="https://github.com/tchamouza" target="_blank"><i class="fab fa-github"></i></a>
-                <a href="http://linkedin.com/in/toï-ewaza-tchamouza/" target="_blank"><i
-                        class="fab fa-linkedin-in"></i></a>
-                <a href="mailto:tchamouzabeni68@gmail.com"><i class="fas fa-envelope"></i></a>
-            </div>
+          </div>
         </div>
-    </footer>
+      </div>
+    </div>
+  </section>
+
+  <!-- FORMATION -->
+  <section id="formation" class="bg-dark">
+    <div class="container">
+      <h2 class="section-title">Parcours Académique</h2>
+      <div class="neon-line"></div>
+      <div class="timeline mt-5">
+        <div class="timeline-item reveal">
+          <div class="timeline-content">
+            <h4 class="university-highlight"><i class="fas fa-university me-2"></i>Université de Lomé</h4>
+            <h5>Licence en Mathématiques Fondamentales</h5>
+            <p class="text-muted">2022 - Présent</p>
+            <p>Formation approfondie en mathématiques pures : algèbre, analyse, géométrie, topologie et logique mathématique.</p>
+            <div class="math-domains mt-2">
+              <span class="math-domain">Algèbre</span>
+              <span class="math-domain">Analyse</span>
+              <span class="math-domain">Géométrie</span>
+            </div>
+          </div>
+        </div>
+        
+        <div class="timeline-item reveal">
+          <div class="timeline-content">
+            <h4><i class="fas fa-laptop-code me-2"></i>ESIG Global Success</h4>
+            <h5>Développement Web & Cybersécurité</h5>
+            <p class="text-muted">2023 - Présent</p>
+            <p>Formation technique en développement web full-stack et sécurité offensive des systèmes d'information.</p>
+            <div class="math-domains mt-2">
+              <span class="badge bg-primary">PHP</span>
+              <span class="badge bg-info">Python</span>
+              <span class="badge bg-success">MySQL</span>
+            </div>
+          </div>
+        </div>
+        
+        <div class="timeline-item reveal">
+          <div class="timeline-content">
+            <h4><i class="fas fa-shield-alt me-2"></i>Red Team-TG</h4>
+            <h5>Cybersécurité Offensive</h5>
+            <p class="text-muted">2023 - Présent</p>
+            <p>Membre actif de la communauté de sécurité offensive, participation à des CTF et projets de recherche en sécurité.</p>
+            <div class="math-domains mt-2">
+              <span class="badge bg-warning">Pentest</span>
+              <span class="badge bg-dark">Forensique</span>
+              <span class="badge bg-danger">Cryptographie</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- COMPÉTENCES -->
+  <section id="competences">
+    <div class="container">
+      <h2 class="section-title">Compétences</h2>
+      <div class="neon-line"></div>
+      <div class="row g-4 mt-5">
+        <div class="col-md-4 reveal">
+          <div class="card p-4 text-center">
+            <i class="fas fa-network-wired fa-3x mb-3"></i>
+            <h4>Réseaux & Systèmes</h4>
+            <p style="color: gray;">Administration Linux, Cisco, Virtualisation, Supervision (Nagios), Routage WiFi, Dual Boot.</p>
+            <div class="skill-item mt-3">
+              <div class="skill-name">
+                <span>Linux</span>
+                <span>80%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-level" style="width: 80%"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-name">
+                <span>Réseaux</span>
+                <span>75%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-level" style="width: 75%"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 reveal">
+          <div class="card p-4 text-center">
+            <i class="fas fa-code fa-3x mb-3"></i>
+            <h4>Développement Web</h4>
+            <p style="color: gray;">HTML, CSS, JS, PHP, MySQL, Laravel, Architecture MVC, Responsive Design et optimisation.</p>
+            <div class="skill-item mt-3">
+              <div class="skill-name">
+                <span>PHP/MySQL</span>
+                <span>75%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-level" style="width: 75%"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-name">
+                <span>HTML/CSS/JS</span>
+                <span>85%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-level" style="width: 85%"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 reveal">
+          <div class="card p-4 text-center">
+            <i class="fas fa-shield-halved fa-3x mb-3"></i>
+            <h4>Cybersécurité</h4>
+            <p style="color:gray ;">Test d'intrusion, audit de sécurité, durcissement Linux, analyse réseau et défense proactive.</p>
+            <div class="skill-item mt-3">
+              <div class="skill-name">
+                <span>Sécurité Offensive</span>
+                <span>70%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-level" style="width: 70%"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-name">
+                <span>Audit de Sécurité</span>
+                <span>65%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-level" style="width: 65%"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MATHÉMATIQUES -->
+  <section id="mathematiques" class="bg-dark">
+    <div class="container">
+      <h2 class="section-title math-title">Mathématiques Fondamentales</h2>
+      <div class="neon-line math-line"></div>
+      <div class="row mt-5">
+        <div class="col-lg-10 mx-auto">
+          <div class="math-content reveal">
+            <p class="lead">
+              Les <span class="math-highlight">mathématiques fondamentales</span> constituent le cœur de ma formation académique à l'<span class="university-highlight">Université de Lomé</span>. 
+              Cette discipline exigeante me fournit les outils intellectuels pour aborder les problèmes techniques avec rigueur, 
+              abstraction et méthode scientifique.
+            </p>
+            
+            <div class="skill-item mt-4">
+              <div class="skill-name">
+                <span>Algèbre & Théorie des Groupes</span>
+                <span>90%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-level math-skill" style="width: 90%"></div>
+              </div>
+            </div>
+            
+            <div class="skill-item">
+              <div class="skill-name">
+                <span>Analyse Réelle & Complexe</span>
+                <span>85%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-level math-skill" style="width: 85%"></div>
+              </div>
+            </div>
+            
+            <div class="skill-item">
+              <div class="skill-name">
+                <span>Géométrie Différentielle</span>
+                <span>80%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-level math-skill" style="width: 80%"></div>
+              </div>
+            </div>
+
+            <div class="skill-item">
+              <div class="skill-name">
+                <span>Logique Mathématique</span>
+                <span>75%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-level math-skill" style="width: 75%"></div>
+              </div>
+            </div>
+
+            <h5 class="mt-4 math-highlight">Domaines de Spécialisation</h5>
+            <div class="math-domains">
+              <span class="math-domain">Algèbre Abstraite</span>
+              <span class="math-domain">Analyse Fonctionnelle</span>
+              <span class="math-domain">Topologie</span>
+              <span class="math-domain">Théorie des Nombres</span>
+              <span class="math-domain">Géométrie Algébrique</span>
+              <span class="math-domain">Logique Formelle</span>
+            </div>
+
+            <div class="math-applications">
+              <h5 class="math-highlight">Applications en Informatique</h5>
+              <div class="application-item">
+                <i class="fas fa-lock"></i>
+                <div>
+                  <strong>Cryptographie Avancée</strong>
+                  <p>Application de l'algèbre et de la théorie des nombres dans les systèmes cryptographiques modernes</p>
+                </div>
+              </div>
+              <div class="application-item">
+                <i class="fas fa-project-diagram"></i>
+                <div>
+                  <strong>Algorithmique Théorique</strong>
+                  <p>Utilisation de la logique mathématique pour la conception et l'analyse formelle d'algorithmes</p>
+                </div>
+              </div>
+              <div class="application-item">
+                <i class="fas fa-cogs"></i>
+                <div>
+                  <strong>Optimisation Mathématique</strong>
+                  <p>Application des méthodes d'optimisation pour résoudre des problèmes complexes en informatique</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CERTIFICATIONS -->
+  <section id="certifications">
+    <div class="container">
+      <h2 class="section-title">Certifications</h2>
+      <div class="neon-line"></div>
+      <div class="row g-4 mt-5">
+        <div class="col-md-4 reveal">
+          <div class="certification-card">
+            <div class="cert-icon">
+              <i class="fas fa-shield-alt"></i>
+            </div>
+            <h5>Cybersécurité Fondamentale</h5>
+            <p>Certification en sécurité informatique et bonnes pratiques</p>
+            <span class="cert-badge">2024</span>
+          </div>
+        </div>
+        <div class="col-md-4 reveal">
+          <div class="certification-card">
+            <div class="cert-icon">
+              <i class="fas fa-network-wired"></i>
+            </div>
+            <h5>Réseaux Cisco CCNA</h5>
+            <p>Fondamentaux des réseaux et commutation Cisco</p>
+            <span class="cert-badge">2024</span>
+          </div>
+        </div>
+        <div class="col-md-4 reveal">
+          <div class="certification-card math-cert">
+            <div class="cert-icon">
+              <i class="fas fa-calculator"></i>
+            </div>
+            <h5>Mathématiques Fondamentales</h5>
+            <p>Université de Lomé - Formation en mathématiques pures</p>
+            <span class="cert-badge">En cours</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJETS -->
+  <section id="projets" class="bg-dark">
+    <div class="container">
+      <h2 class="section-title">Projets Académiques & Techniques</h2>
+      <div class="neon-line"></div>
+      <div class="row g-4 mt-5">
+        <div class="col-md-4 reveal">
+          <div class="project-card">
+            <div class="project-icon">
+              <i class="fas fa-shield-alt"></i>
+            </div>
+            <div class="project-overlay">
+              <h4>Analyseur de Sécurité</h4>
+              <p>Outil d'analyse de vulnérabilités pour applications web</p>
+              <div class="mt-3">
+                <span class="badge bg-primary">PHP</span>
+                <span class="badge bg-info">Python</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 reveal">
+          <div class="project-card math-project">
+            <div class="project-icon">
+              <i class="fas fa-calculator"></i>
+            </div>
+            <div class="project-overlay">
+              <h4>Recherche en Théorie des Groupes</h4>
+              <p>Étude des applications de la théorie des groupes en cryptographie</p>
+              <div class="mt-3">
+                <span class="badge bg-danger">Recherche</span>
+                <span class="badge bg-secondary">Mathématiques</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 reveal">
+          <div class="project-card">
+            <div class="project-icon">
+              <i class="fas fa-network-wired"></i>
+            </div>
+            <div class="project-overlay">
+              <h4>Réseau Sécurisé</h4>
+              <p>Configuration d'un réseau d'entreprise avec politiques de sécurité</p>
+              <div class="mt-3">
+                <span class="badge bg-warning">Cisco</span>
+                <span class="badge bg-dark">Linux</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section id="services">
+    <div class="container">
+      <h2 class="section-title">Services Professionnels</h2>
+      <div class="neon-line"></div>
+      <div class="row g-4 mt-5">
+        <div class="col-md-4 reveal">
+          <div class="card p-4 text-center">
+            <div class="service-icon">
+              <i class="fas fa-laptop-code"></i>
+            </div>
+            <h4>Développement Web Sécurisé</h4>
+            <p style="color: gray;">Applications web modernes avec focus sur la sécurité et les bonnes pratiques</p>
+            <a href="#contact" class="btn btn-outline-info mt-3">Demander un devis</a>
+          </div>
+        </div>
+        <div class="col-md-4 reveal">
+          <div class="card p-4 text-center">
+            <div class="service-icon">
+              <i class="fas fa-shield-alt"></i>
+            </div>
+            <h4>Audit de Sécurité</h4>
+            <p style="color: gray;">Évaluation et renforcement de la sécurité des systèmes et applications</p>
+            <a href="#contact" class="btn btn-outline-info mt-3">Demander un devis</a>
+          </div>
+        </div>
+        <div class="col-md-4 reveal">
+          <div class="card p-4 text-center math-card">
+            <div class="service-icon">
+              <i class="fas fa-calculator"></i>
+            </div>
+            <h4>Consulting Mathématique</h4>
+            <p style="color: gray;">Solutions mathématiques pour problèmes techniques et cryptographiques</p>
+            <a href="#contact" class="btn btn-outline-danger mt-3">Demander un devis</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="bg-dark">
+    <div class="container">
+      <h2 class="section-title">Contact</h2>
+      <div class="neon-line"></div>
+      <div class="row mt-5">
+        <div class="col-lg-10 mx-auto">
+          <div class="contact-info">
+            <div class="row">
+              <div class="col-md-4 reveal">
+                <div class="contact-item">
+                  <i class="fas fa-phone-alt"></i>
+                  <div>
+                    <h5>Téléphone</h5>
+                    <p><a href="tel:+22892588895" class="text-light">+228 92 58 88 95</a></p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4 reveal">
+                <div class="contact-item">
+                  <i class="fas fa-envelope"></i>
+                  <div>
+                    <h5>Email</h5>
+                    <p><a href="mailto:tchamouzabeni68@gmail.com" class="text-light">tchamouzabeni68@gmail.com</a></p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4 reveal">
+                <div class="contact-item">
+                  <i class="fab fa-whatsapp"></i>
+                  <div>
+                    <h5>WhatsApp</h5>
+                    <p><a href="https://wa.me/22892588895" class="text-light" target="_blank">Me contacter</a></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="social-links">
+              <a href="https://github.com/tchamouza" target="_blank" class="social-link">
+                <i class="fab fa-github"></i>
+              </a>
+              <a href="http://linkedin.com/in/toï-ewaza-tchamouza/" target="_blank" class="social-link">
+                <i class="fab fa-linkedin"></i>
+              </a>
+              <a href="mailto:tchamouzabeni68@gmail.com" class="social-link">
+                <i class="fas fa-envelope"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 Toï Ewaza TCHAMOUZA | Tous droits réservés.</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
-
 </html>
