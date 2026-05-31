@@ -152,7 +152,7 @@ export default function HomePage() {
         {/* CV NAV BUTTON */}
         {cvFile ? (
           <button className="cv-download-btn" onClick={handleCvDownload} style={{marginRight:'12px'}}>
-            ↓ Télécharger CV
+            ↓ Mon CV
           </button>
         ) : (
           <label className="cv-upload-btn" style={{marginRight:'12px'}}>
