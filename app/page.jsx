@@ -77,7 +77,7 @@ export default function HomePage() {
   const handleCvDownload = useCallback(() => {
     const a = document.createElement("a")
     a.href = CV_URL
-    a.download = "Mon_CV.pdf"
+    a.download = "CV_TCHAMOUZA.pdf"
     a.click()
 
     setCvBanner(true)
