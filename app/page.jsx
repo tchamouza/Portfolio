@@ -58,7 +58,7 @@ export default function HomePage() {
     const file = e.target.files?.[0]
     if (!file) return
     if (file.size > 10 * 1024 * 1024) { alert('Fichier trop volumineux (max 10 Mo)'); return }
-    const url = URL.createObjectURL(file)
+    const url = "/cv.pdf"
     const sizeKb = (file.size / 1024).toFixed(0)
     const sizeStr = file.size > 1024 * 1024 ? `${(file.size/1024/1024).toFixed(1)} Mo` : `${sizeKb} Ko`
     setCvFile({ name: file.name, size: sizeStr, url, blob: file })
