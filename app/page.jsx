@@ -156,7 +156,7 @@ export default function HomePage() {
           </button>
         ) : (
           <label className="cv-upload-btn" style={{marginRight:'12px'}}>
-            📄 Voir le CV
+            Voir Mon CV
             <input type="file" accept=".pdf,.doc,.docx" onChange={handleCvUpload} />
           </label>
         )}
@@ -257,51 +257,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* CV SECTION */}
-      <section id="cv" className="section">
-        <div className="section-inner">
-          <div className="section-header">
-            <span className="section-num">✦ / CV</span>
-            <div>
-              <h2 className="section-title">Mon Curriculum<br/>Vitae</h2>
-              <p className="section-sub">Consultez ou téléchargez directement le CV.</p>
-            </div>
-          </div>
-
-          {cvFile ? (
-            <div className="cv-section">
-              <div style={{fontSize:'2rem',flexShrink:0}}>📄</div>
-              <div className="cv-file-info">
-                <div className="cv-file-name">{cvFile.name}</div>
-                {cvFile.size && <div className="cv-file-size">{cvFile.size}</div>}
-              </div>
-              <div className="cv-actions">
-                <button className="cv-download-btn" onClick={handleCvDownload}>↓ Télécharger</button>
-                <label className="cv-upload-btn" style={{fontSize:'.7rem',padding:'7px 12px'}}>
-                  ↑ Remplacer
-                  <input type="file" accept=".pdf,.doc,.docx" onChange={handleCvUpload} />
-                </label>
-                <button
-                  onClick={handleCvRemove}
-                  style={{fontSize:'.7rem',padding:'7px 12px',background:'none',border:'1px solid var(--border)',color:'var(--muted)',borderRadius:'4px',cursor:'pointer',transition:'all .2s'}}
-                  onMouseEnter={e => { e.target.style.borderColor='#c8432a'; e.target.style.color='#c8432a' }}
-                  onMouseLeave={e => { e.target.style.borderColor='var(--border)'; e.target.style.color='var(--muted)' }}
-                >✕ Supprimer</button>
-              </div>
-            </div>
-          ) : (
-            <div className="cv-empty">
-              <div className="cv-empty-icon">📋</div>
-              <div className="cv-empty-text">Aucun CV ajouté pour le moment.<br/>Uploadez votre CV (PDF, DOC, DOCX — max 10 Mo)</div>
-              <label className="cv-upload-btn" style={{display:'inline-flex',position:'relative'}}>
-                ↑ Ajouter mon CV
-                <input type="file" accept=".pdf,.doc,.docx" onChange={handleCvUpload} />
-              </label>
-            </div>
-          )}
-        </div>
-      </section>
-
+      
       {/* FORMATION */}
       <section id="formation" className="section">
         <div className="section-inner">
