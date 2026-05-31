@@ -53,40 +53,48 @@ export default function HomePage() {
     return () => window.removeEventListener('mousemove', mv)
   }, [])
 
-  // CV upload handler
-  const handleCvUpload = useCallback((e) => {
-    const file = e.target.files?.[0]
+    const CV_URL = "/cv.pdf"
+  const handleCvUpload = useCallback(e => {
+    const file = e.target.files[0]
     if (!file) return
-    if (file.size > 10 * 1024 * 1024) { alert('Fichier trop volumineux (max 10 Mo)'); return }
-    const url = "/cv.pdf"
-    const sizeKb = (file.size / 1024).toFixed(0)
-    const sizeStr = file.size > 1024 * 1024 ? `${(file.size/1024/1024).toFixed(1)} Mo` : `${sizeKb} Ko`
-    setCvFile({ name: file.name, size: sizeStr, url, blob: file })
+
+    const url = URL.createObjectURL(file)
+    setCvFile({ name: file.name, size: file.size, url })
     localStorage.setItem('portfolio_cv_name', file.name)
     localStorage.setItem('portfolio_cv_url', url)
-    // Show banner
-    setCvBanner(true)
-    if (bannerTimeout) clearTimeout(bannerTimeout)
-    const t = setTimeout(() => setCvBanner(false), 5000)
-    setBannerTimeout(t)
-    e.target.value = ''
-  }, [bannerTimeout])
 
-  const handleCvDownload = useCallback(() => {
-    if (!cvFile) return
-    const a = document.createElement('a')
-    a.href = cvFile.url
-    a.download = cvFile.name
-    a.click()
-  }, [cvFile])
+    // reset input
+    e.target.value = null
+  }, [])
 
   const handleCvRemove = useCallback(() => {
-    if (cvFile?.url) URL.revokeObjectURL(cvFile.url)
     setCvFile(null)
     localStorage.removeItem('portfolio_cv_name')
     localStorage.removeItem('portfolio_cv_url')
-  }, [cvFile])
+  }, [])  
 
+
+  const handleCvDownload = useCallback(() => {
+    const a = document.createElement("a")
+    a.href = CV_URL
+    a.download = "Mon_CV.pdf"
+    a.click()
+
+    setCvBanner(true)
+
+    // clear ancien timeout
+    if (bannerTimeout) clearTimeout(bannerTimeout)
+
+    // nouveau timeout
+    const t = setTimeout(() => {
+      setCvBanner(false)
+    }, 5000)
+
+    setBannerTimeout(t)
+  }, [bannerTimeout])
+ 
+
+    
   const navSections = [
     ['#profile','Profil'],['#apropos','À propos'],['#formation','Formation'],
     ['#competences','Compétences'],['#services','Services'],['#contact','Contact'],
