@@ -1,5 +1,7 @@
 "use client";
 import { useEffect, useRef, useState, useCallback } from "react";
+import Image from "next/image"
+
 
 const THEMES = ["light", "dark", "system"];
 const THEME_LABELS = { light: "☀ Clair", dark: "☾ Sombre", system: "◑ Auto" };

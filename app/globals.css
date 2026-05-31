@@ -264,3 +264,36 @@ img,video,iframe{max-width:100%;height:auto}
   .td-level{text-align:left;width:auto}
   footer{padding:20px;flex-direction:column;gap:10px;text-align:center}
 }
+.hero-portrait {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* IMAGE */
+.portrait-img {
+  object-fit: cover;
+  display: block;
+}
+
+
+/* MOBILE FIX IMPORTANT */
+@media (max-width: 768px) {
+  .hero-right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero-portrait {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .portrait-img {
+    width: 110px;
+    height: 110px;
+  }
+}
