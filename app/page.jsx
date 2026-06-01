@@ -202,24 +202,13 @@ export default function HomePage() {
         </div>
 
         {/* CV NAV BUTTON */}
-        {cvFile ? (
           <button
             className="cv-download-btn"
             onClick={handleCvDownload}
-            style={{ marginRight: "12px" }}
+            style={{ marginLeft: "auto", marginRight: "20px" }}
           >
-            ↓ Mon CV
+            CV
           </button>
-        ) : (
-          <label className="cv-upload-btn" style={{ marginRight: "12px" }}>
-             CV
-            <input
-              type="file"
-              accept=".pdf,.doc,.docx"
-              onChange={handleCvUpload}
-            />
-          </label>
-        )}
 
         <a
           href="#contact"
