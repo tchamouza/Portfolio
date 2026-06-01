@@ -119,13 +119,13 @@ export default function HomePage() {
       num: "01",
       title: "Développement Web",
       sub: "Full-stack",
-      items: ["HTML5 & CSS3", "JavaScript", "PHP / MVC", "MySQL"],
+      items: ["HTML5 & CSS3", "JavaScript", "PHP / MVC", "MySQL", "Frameworks (Next.js)"],
       lvl: 4,
     },
     {
       num: "02",
       title: "Cybersécurité",
-      sub: "Defensive",
+      sub: "Defensive &amp; Offensives",
       items: ["Nmap", "Wireshark", ],
       lvl: 3,
     },
@@ -133,7 +133,7 @@ export default function HomePage() {
       num: "03",
       title: "Réseaux & Systèmes",
       sub: "Administration",
-      items: ["Cisco / VLAN", "Linux (Debian)", "VMware", "Nagios", "Windows server"],
+      items: ["Cisco / VLAN", "Linux (Debian)", "VMware", "Nagios", "Windows Server"],
       lvl: 4,
     },
     {
@@ -147,7 +147,7 @@ export default function HomePage() {
       num: "05",
       title: "Programmation",
       sub: "Scripting",
-      items: ["Python", "C", "Bash", "Algorithmique","powershell"],
+      items: ["Python", "C", "Bash", "Algorithmique","Powershell"],
       lvl: 4,
     },
   ];
@@ -251,10 +251,10 @@ export default function HomePage() {
               </h1>
               <div className="hero-roles a3">
                 {[
-                  "Mathématicien ",
-                  "Cybersécurité ",
-                  "Administration Systèmes & Réseaux",
-                  "Développeur Web",
+                  "Etudiant Mathématiques Fondamentales - Université de Lomé",
+                  "Cybersécurité - ESIG Global Success",
+                  "Administration Systèmes & Réseaux - ESIG Global Success",
+                  "Développeur Web - ESIG Global Success",
                 ].map((r, i) => (
                   <div className="hero-role" key={i}>
                     <span className="role-dot" />
@@ -312,7 +312,7 @@ export default function HomePage() {
         <div className="hero-ticker a5">
           {[
             ["3", "ans d'études — Univ. de Lomé"],
-            ["2024", "entrée en formation tech"],
+            ["2024", "entrée en formation professionnelle"],
             ["5+", "technologies maîtrisées"],
           ].map(([n, l], i) => (
             <div
@@ -361,8 +361,10 @@ export default function HomePage() {
                 </p>
                 <p>
                   Étudiant à l'<strong>Université de Lomé</strong>, je développe aussi une
-                  approche unique alliant théorie mathématique et sécurité
-                  informatique defensive a ESIG Global Success.
+                  approche unique alliant théorie mathématique et cybersécurité
+                   a ESIG Global Success.Je suis capable de résoudre des problèmes complexes avec une précision algorithmique tout en assurant la robustesse et la sécurité
+                  des systèmes que je conçois.Pour moi, chaque projet est une opportunité de fusionner la beauté abstraite des mathématiques avec l'efficacité pragmatique de la technologie.
+                  Je suis a la recherche de stage et de mission freelance dans les domaines du développement web, de la cybersécurité et de l'administration systèmes et réseaux.
                 </p>
                 <p>
                   Ma formation en cybersécurité, me permet d'aborder chaque
@@ -725,27 +727,6 @@ export default function HomePage() {
                   Freelance, stages et collaborations. Je réponds sous 24h à
                   toutes les demandes sérieuses.
                 </div>
-                {cvFile && (
-                  <button
-                    onClick={handleCvDownload}
-                    style={{
-                      marginTop: 16,
-                      width: "100%",
-                      padding: "10px",
-                      background: "var(--accent)",
-                      color: "var(--paper)",
-                      border: "none",
-                      borderRadius: 4,
-                      cursor: "pointer",
-                      fontFamily: "var(--mono)",
-                      fontSize: ".7rem",
-                      letterSpacing: ".1em",
-                      textTransform: "uppercase",
-                    }}
-                  >
-                    ↓ Télécharger mon CV
-                  </button>
-                )}
               </div>
             </div>
           </div>
@@ -757,15 +738,6 @@ export default function HomePage() {
           Toï<span>.</span>Ewaza TCHAMOUZA
         </div>
         <div style={{ display: "flex", alignItems: "center", gap: "16px" }}>
-          {cvFile && (
-            <button
-              onClick={handleCvDownload}
-              className="cv-download-btn"
-              style={{ padding: "6px 14px", fontSize: ".65rem" }}
-            >
-              ↓ CV
-            </button>
-          )}
           <div className="footer-copy">© 2026 — Tous droits réservés</div>
         </div>
       </footer>
