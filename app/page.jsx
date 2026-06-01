@@ -125,15 +125,15 @@ export default function HomePage() {
     {
       num: "02",
       title: "Cybersécurité",
-      sub: "Offensive",
-      items: ["Red Team", "Pentest", "OWASP Top 10", "CTF"],
+      sub: "Defensive",
+      items: ["Nmap", "Wireshark", ],
       lvl: 3,
     },
     {
       num: "03",
       title: "Réseaux & Systèmes",
       sub: "Administration",
-      items: ["Cisco / VLAN", "Linux (Debian)", "VMware", "Nagios"],
+      items: ["Cisco / VLAN", "Linux (Debian)", "VMware", "Nagios", "Windows server"],
       lvl: 4,
     },
     {
@@ -147,7 +147,7 @@ export default function HomePage() {
       num: "05",
       title: "Programmation",
       sub: "Scripting",
-      items: ["Python", "C", "Bash", "Algorithmique"],
+      items: ["Python", "C", "Bash", "Algorithmique","powershell"],
       lvl: 4,
     },
   ];
@@ -262,10 +262,10 @@ export default function HomePage() {
               </h1>
               <div className="hero-roles a3">
                 {[
-                  "Mathématicien — Université de Lomé",
-                  "Développeur Web Full-Stack",
-                  "Cybersécurité — Red Team TG",
+                  "Mathématicien ",
+                  "Cybersécurité ",
                   "Administration Systèmes & Réseaux",
+                  "Développeur Web",
                 ].map((r, i) => (
                   <div className="hero-role" key={i}>
                     <span className="role-dot" />
@@ -300,7 +300,7 @@ export default function HomePage() {
             </div>
           </div>
           <div className="hero-right">
-            <p className="hero-right-overline">Portfolio — 2025</p>
+            <p className="hero-right-overline">Portfolio — 2026</p>
             <div className="hero-portrait">
               <img src="/me.jpg" alt="Toï Ewaza" className="portrait-img" />
 
@@ -310,7 +310,6 @@ export default function HomePage() {
               {[
                 ["Formation", "Mathématiques Fondamentales"],
                 ["École", "ESIG Global Success"],
-                ["Communauté", "Red Team-TG"],
                 ["Statut", "Disponible · Freelance"],
               ].map(([k, v]) => (
                 <div className="info-cell" key={k}>
@@ -326,7 +325,6 @@ export default function HomePage() {
             ["3", "ans d'études — Univ. de Lomé"],
             ["2024", "entrée en formation tech"],
             ["5+", "technologies maîtrisées"],
-            ["RedTeam", "cybersécurité offensive"],
           ].map(([n, l], i) => (
             <div
               key={i}
@@ -373,14 +371,12 @@ export default function HomePage() {
                   <span className="hl">élégantes et performantes.</span>
                 </p>
                 <p>
-                  Étudiant à l'<strong>Université de Lomé</strong> et membre
-                  actif de la <strong>Red Team-TG</strong>, je développe une
+                  Étudiant à l'<strong>Université de Lomé</strong>, je développe aussi une
                   approche unique alliant théorie mathématique et sécurité
-                  informatique offensive.
+                  informatique defensive a ESIG Global Success.
                 </p>
                 <p>
-                  Ma formation en développement web full-stack, couplée à ma
-                  sensibilité pour la cybersécurité, me permet d'aborder chaque
+                  Ma formation en cybersécurité, me permet d'aborder chaque
                   projet avec une vision globale : fonctionnel, sécurisé,
                   scalable.
                 </p>
@@ -395,9 +391,8 @@ export default function HomePage() {
                   ],
                   [
                     "Formation tech",
-                    "ESIG Global Success — Dév. Web & Cybersécurité",
+                    "ESIG Global Success — Cybersécurité",
                   ],
-                  ["Communauté", "Red Team-TG — Membre actif"],
                   ["Localisation", "Lomé, Togo"],
                   [
                     "Email",
@@ -771,6 +766,17 @@ export default function HomePage() {
       <footer>
         <div className="footer-brand">
           Toï<span>.</span>Ewaza TCHAMOUZA
+        </div>
+        <div style={{ display: "flex", alignItems: "center", gap: "16px" }}>
+          {cvFile && (
+            <button
+              onClick={handleCvDownload}
+              className="cv-download-btn"
+              style={{ padding: "6px 14px", fontSize: ".65rem" }}
+            >
+              ↓ CV
+            </button>
+          )}
           <div className="footer-copy">© 2026 — Tous droits réservés</div>
         </div>
       </footer>
