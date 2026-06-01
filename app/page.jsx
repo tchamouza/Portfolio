@@ -212,7 +212,7 @@ export default function HomePage() {
           </button>
         ) : (
           <label className="cv-upload-btn" style={{ marginRight: "12px" }}>
-            Voir Mon CV
+             CV
             <input
               type="file"
               accept=".pdf,.doc,.docx"
@@ -771,18 +771,7 @@ export default function HomePage() {
       <footer>
         <div className="footer-brand">
           Toï<span>.</span>Ewaza TCHAMOUZA
-        </div>
-        <div style={{ display: "flex", alignItems: "center", gap: "16px" }}>
-          {cvFile && (
-            <button
-              onClick={handleCvDownload}
-              className="cv-download-btn"
-              style={{ padding: "6px 14px", fontSize: ".65rem" }}
-            >
-              ↓ CV
-            </button>
-          )}
-          <div className="footer-copy">© 2025 — Tous droits réservés</div>
+          <div className="footer-copy">© 2026 — Tous droits réservés</div>
         </div>
       </footer>
     </>
