@@ -292,8 +292,12 @@ img,video,iframe{max-width:100%;height:auto}
     justify-content: center;
   }
 
-  .portrait-img {
-    width: 110px;
-    height: 110px;
+  
+}@media (max-width: 768px) {
+  .hero-portrait {
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
+
 }
