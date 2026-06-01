@@ -453,7 +453,7 @@ export default function HomePage() {
                 year: "2024 — Présent",
                 school: "ESIG Global Success",
                 degree: "Développement Web & Cybersécurité",
-                desc: "Formation technique intensive en développement full-stack et sécurité offensive. Administration systèmes Linux & Windows.",
+                desc: "Formation technique intensive en cybersécurité. Administration systèmes Linux & Windows.",
                 tags: [
                   "PHP / MySQL",
                   "Python",
